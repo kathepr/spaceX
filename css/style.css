@@ -1,2 +1,59 @@
-@import url(variables.css);
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
+
+.body {
+    background-color: lightblue
+
+}
+.header {
+    background-color: lightgreen;
+
+}
+.header__title {
+}
+.main {
+    background-color: lightcoral;
+    display: flex;
+}
+.nav__left {
+    background-color: lightgoldenrodyellow;
+    width: 200px
+}
+.description__item {
+}
+.description__container {
+    background-color: blue;
+    height: 100px
+}
+.main__section {
+}
+.section__information {
+}
+.carousel {
+}
+.carousel__item {
+}
+.section__information__container {
+}
+.section__information__2 {
+}
+.section__image {
+}
+.section__information__3 {
+}
+.footer {
+    height: 200px;
+    background-color: rgb(208, 127, 255);
+}
+.nav__right {
+    background-color: lightgoldenrodyellow;
+    width: 200px
+}
+.information__item {
+}
+.pagination {
+}
