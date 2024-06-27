@@ -62,32 +62,55 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('../storage/image/stars.gif');
+    background-repeat:repeat;
 }
 .section__information__2 {
 }
 .section__image {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 
 
 }
 .arrow{
-    height: 80px;
-    padding: 20px
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    width: 50px; /* Ajusta el tamaño de las flechas según sea necesario */
+    height: 50px;
 
 }
-.image__crew{
 
-    height: 1000px
+
+#left_arrow {
+    left: -100px; /* Ajusta esta distancia según sea necesario */
+}
+
+#right_arrow {
+    right: -100px; /* Ajusta esta distancia según sea necesario */
+}
+
+.image__crew{
+    height: 1000px;
+    width: auto;
+    margin: 30px;
+    border-radius: 15px;
     
 }
+
+
 
 .section__information__3 {
 }
 
 .footer{
-    padding: 1% 1% 0 1%; /* Padding superior, izquierdo y derecho en 1% */
+    padding: 0 1% 0 1%; /* Padding superior, izquierdo y derecho en 1% */
     font-size: 20px;
     width: 1500px;
     
@@ -110,7 +133,7 @@ body {
     display: flex;
     list-style: none;
     justify-content: space-between;
-    padding: 2%;
+    padding: 1.2%;
     border-radius: 15px;
     overflow: hidden;
     background: rgb(101, 117, 180);
