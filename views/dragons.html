@@ -17,96 +17,24 @@
     <main class="main">
 
         <nav class="nav__left">
-            <div class="description__item">
-                <div class="description__container">
-                    <h2>Details</h2>
-                    <p>Crew Capacity: 0</p>
-                    <p>Sidewall angle: 15</p>
-                    <p>Orbit Duration (year): 2</p>
-                    <div class="container__weight">
-                        <img src="../storage/image/weight.png">
-                        <p>Dry mass (kg): 4200</p>
-                        <p>||</p>
-                        <p>Dry mass (lb): 9300</p>
-                    </div>
-                    
-                </div>
-                <div class="description__container">
-                    <h2>Thrusters:</h2>
-                    <p>Type: Draco</p>
-                    <p>Amount: 18</p>
-                    <p>Pods: 4</p>
-                    <p>Fuel: nitrogen tetroxide, monomethylhydrazine</p>
-                    <p>Specific Impulse (isp): 300</p>
-                    <p>Kilonewtons(kN): 0.4</p>
-                    <p>Pounds-force(lbf): 90</p>
-                    
-                </div>
-                <div class="description__container">
-                    <h2>Heat Shield</h2>
-                    <p>Material: PICA-X</p>
-                    <p>Size (meters): 3.6</p>
-                    <p>Development Partner: NASA</p>
-                </div>
-                <div class="description__container">
-                    <h2>Launch Payload Mass</h2>
-                    <p>Kg: 6000</p>
-                    <p>Lb: 13228</p>
-
-                </div>
-                <div class="description__container">
-                    <h2>Return Payload Mass</h2>
-                    <p>Kg: 3000</p>
-                    <p>Lb: 6614</p>
-                </div>
-                <div class="description__container">
-                    <h2>Return Payload Volume</h2>
-                    <p>Cubic Meters: 11</p>
-                    <p>Cubic Feet: 388</p>
-                </div>
-                <div class="description__container">
-                    <h2>Pressurized Capsule</h2>
-                    <p>Payload Volume</p>
-                    <p>Cubic Meters: 11</p>
-                    <p>Cubic Feet: 388</p>
-                </div>
-                <div class="description__container">
-                    <h2>Trunk</h2>
-                    <p>Trunk Volume</p>
-                    <p>Cubic Meters: 14</p>
-                    <p>Cubic Feet: 494</p>
-                    <p>Cargo</p>
-                    <p>Solar Array: 2</p>
-                    <p>Unpressurized Cargo: true</p>
-                </div>
-                <div class="description__container">
-                    <h2>Height with Trunk</h2>
-                    <p>Meters: 7.2</p>
-                    <p>Feet: 23.6</p>
-                </div>
-                <div class="description__container">
-                    <h2>Diameter</h2>
-                    <p>Meters: 3.7</p>
-                    <p>Feet: 12</p>
-                </div>
-            </div>
+           
+            <div id="dragonDetails" class="description__item"></div>
+            
         </nav>
 
         <section class="main__section">
             <article class="section__information">
                 <div class="carousel">
-                    <div class="carousel__item">Name: Dragon 1</div>
-                    <div class="carousel__item">Type: Capsule </div>
-                    <div class="carousel__item">Active: True </div>
-                    
+                    <div id="dragonName" class="carousel__item">Name: </div>
+                    <div id="dragonType" class="carousel__item">Type: </div>
+                    <div id="dragonActive" class="carousel__item">Active: </div>
                 </div>
-
 
                 <div class="section__information__container">
                     <div class="section__information__2"></div>
                     <div class="section__image">
                         <img id="left_arrow" class="arrow" src="../storage/image/left__arow.png">
-                        <img id="image_crew" class="image__crew" src="https://farm3.staticflickr.com/2815/32761844973_4b55b27d3c_b.jpg" referrerpolicy="no-referrer">
+                        <img id="image_crew" class="image__crew" src="" referrerpolicy="no-referrer">
                         <img id="right_arrow" class="arrow" src="../storage/image/right__arrow.png">
                     </div>
                     <div class="section__information__3"></div>
@@ -220,17 +148,9 @@
                 </ul>
             </footer>
         </section>
-        <nav class="nav__right">
-            <div class="information__item">
-                <h2>Description</h2>
-                <p>Dragon is a reusable spacecraft developed by SpaceX, an American private space transportation company based in Hawthorne, California. Dragon is launched into space by the SpaceX Falcon 9 two-stage-to-orbit launch vehicle. The Dragon spacecraft was originally designed for human travel, but so far has only been used to deliver cargo to the International Space Station (ISS).</p>
-                
-            </div>
-            <div class="information__item">
-                <h2></h2>
-                <p></p>
 
-            </div>
+        <nav class="nav__right">
+            <div id="dragonDescription" class="information__item"></div>
         </nav>
     </main>
 </body>
