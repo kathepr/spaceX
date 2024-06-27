@@ -1,22 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2a2a5c;
+
+}
+
+.header {
+    padding: 30px;
+    font-size: 50px;
+}
+.header__title {
+    color:#ffffff
+}
+.main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.nav__left {
+    width: 500px; 
+    background-image: url('../storage/image/stars.gif');
+    background-size: cover;
+    background-repeat: repeat;
+
+}
+
+.nav__left img{
+    width: 490px
+}
+.description__item {
+}
+.description__container {
+}
+.main__section {
+
+    width: 60%
+}
+.section__information {
+    border-radius: 15px;
+    background: rgb(101, 117, 180);
+    color:#ffffff
+}
+.carousel {
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+    font-size: 20px;
+}
+.carousel__item {
+}
+.section__information__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section__information__2 {
+}
+.section__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.arrow{
+    height: 80px;
+    padding: 20px
+
+}
+.image__crew{
+
+    height: 1000px
+    
+}
+
+.section__information__3 {
+}
+
 .footer{
+    padding: 1% 1% 0 1%; /* Padding superior, izquierdo y derecho en 1% */
+    font-size: 20px;
+    width: 1500px;
+    
 
 }
 
 .footer__list {
-    background-color: aqua;
     display: flex;
     list-style: none;
     justify-content: space-between;
+    padding: 2%;
+    border-radius: 15px;
 
 }
 
+
+
+.footer__list {
+    position: relative;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 2%;
+    border-radius: 15px;
+    overflow: hidden;
+    background: rgb(101, 117, 180);
+    
+
+}
 
 .footer__links{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-decoration: none;
+    color: white
+
+
 }
 
 .footer__links img{
-    width: 60px
+    width: 30%
 }
+
+
+
+.nav__right {
+    width: 500px;
+    background-image: url('../storage/image/stars.gif');
+    background-size: cover;
+    background-repeat: repeat;
+}
+.information__item {
+}
+.pagination {
+}
+
+
