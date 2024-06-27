@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dragonType = document.getElementById('dragonType');
     const dragonActive = document.getElementById('dragonActive');
     const dragonDetails = document.getElementById('dragonDetails');
-    const dragonImage = document.getElementById('image_crew');
+    const imageContainer = document.getElementById('image_container');
     const dragonDescription = document.getElementById('dragonDescription');
     const leftArrow = document.getElementById('left_arrow');
     const rightArrow = document.getElementById('right_arrow');
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>Sidewall angle: ${dragon.sidewall_angle_deg}</p>
             <p>Orbit Duration (year): ${dragon.orbit_duration_yr}</p>
             <div class="container__weight">
-                <img src="../storage/image/weight.png">
+                <img src="../storage/image/weight.png" referrerpolicy="no-referrer">
                 <p>Dry mass (kg): ${dragon.dry_mass_kg}</p>
                 <p>||</p>
                 <p>Dry mass (lb): ${dragon.dry_mass_lb}</p>
@@ -84,28 +84,34 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>Meters: ${dragon.diameter.meters}</p>
             <p>Feet: ${dragon.diameter.feet}</p>
         `;
-        dragonImage.src = dragon.flickr_images[0];
+        
+        // Limpiar las imagenes previas
+        imageContainer.innerHTML = '';
+        dragon.flickr_images.forEach(image => {
+            const img = document.createElement('img');
+            img.src = image;
+            img.classList.add('image__crew');
+            img.setAttribute('referrerpolicy', 'no-referrer');
+            imageContainer.appendChild(img);
+        });
+
         dragonDescription.innerHTML = `
             <h2>Description</h2>
             <p>${dragon.description}</p>
         `;
     };
 
-    // Event listeners for navigation
+    // Event listeners que facilitan la navegación con las flechas
     leftArrow.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            displayDragon(currentIndex);
-        }
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : dragons.length - 1;
+        displayDragon(currentIndex);
     });
-
+    
     rightArrow.addEventListener('click', () => {
-        if (currentIndex < dragons.length - 1) {
-            currentIndex++;
-            displayDragon(currentIndex);
-        }
+        currentIndex = (currentIndex < dragons.length - 1) ? currentIndex + 1 : 0;
+        displayDragon(currentIndex);
     });
 
-    // Initial fetch
+    // Trayendo información desde el comienzo, para que aparezca en la página cuando el usuario acceda al módulo
     fetchDragons();
 });
