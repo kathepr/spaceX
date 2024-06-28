@@ -12,17 +12,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const leftArrow = document.getElementById('left_arrow');
     const rightArrow = document.getElementById('right_arrow');
 
-    // Se obtiene información de la API
-    fetch(crewEndpoint)
-        .then(response => response.json())
-        .then(data => {
-            crewData = data;
+    // Función asíncrona para obtener información de la API
+    async function fetchCrewData() {
+        try {
+            const response = await fetch(crewEndpoint);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            crewData = await response.json();
             displayCrewMember(currentIndex);
-        })
-        .catch(error => console.error('Error al obtener datos de la tripulación:', error));
+        } catch (error) {
+            console.error('Error al obtener datos de la tripulación:', error);
+        }
+    }
 
     // Se muestran datos de los miembros de la tripulación
     function displayCrewMember(index) {
+        if (crewData.length === 0) return;
         const member = crewData[index];
         nameElement.textContent = `Name: ${member.name}`;
         agencyElement.textContent = `Agency: ${member.agency}`;
@@ -41,4 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentIndex = (currentIndex < crewData.length - 1) ? currentIndex + 1 : 0;
         displayCrewMember(currentIndex);
     });
+
+    // Llamar a la función fetchCrewData
+    fetchCrewData();
 });
