@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/rockets.css">
+    <script type="module" src="../js/rockets.js" defer></script>
+    <title>Rockets Information</title>
+</head>
+
+<body class="body">
+
+    <header class="header">
+        <div class="header__title">SpaceX Rockets</div>
+    </header>
+
+    <main class="main">
+
+        <nav class="nav__left">
+           
+            <div id="rocketDetails" class="description__item">
+                <h2>Rocket Details</h2>
+                <p id="rocketHeight"></p>
+                <p></p>
+                <div class="container__weight">
+                    <h3>Height</h3>
+                    <img src="../storage/image/height.png" referrerpolicy="no-referrer">
+                    <p id="heightMeters"></p>
+                    <p>||</p>
+                    <p id="heightFeet"></p>
+                </div>
+                <p></p>
+                <div class="container__weight">
+                    <h3>Diameter</h3>
+                    <img src="../storage/image/diameter.png" referrerpolicy="no-referrer">
+                    <p id="diameterMeters"></p>
+                    <p>||</p>
+                    <p id="diameterFeet"></p>
+                </div>
+                <p></p>
+                <div class="container__weight">
+                    <h3>Mass</h3>
+                    <img src="../storage/image/weight.png" referrerpolicy="no-referrer">
+                    <p id="massKg"></p>
+                    <p>||</p>
+                    <p id="massLb"></p>
+                </div>
+                <p></p>
+                <h2>Engines</h2>
+                <div class="container__weight">
+                    <h4>ISP (Specific Impulse)</h4>
+                    <img src="../storage/image/weight.png" referrerpolicy="no-referrer">
+                    <p id="ispSeaLevel"></p>
+                    <p>||</p>
+                    <p id="ispVacuum"></p>
+                </div>
+                <div class="container__weight">
+                    <h4>Thrust</h4>
+                    <img src="../storage/image/weight.png" referrerpolicy="no-referrer">
+                    <p id="thrustSeaLevelKN"></p>
+                    <p>||</p>
+                    <p id="thrustSeaLevelLbf"></p>
+                </div>
+                <div class="container__weight">
+                    <h4>Thrust Vacuum</h4>
+                    <img src="../storage/image/weight.png" referrerpolicy="no-referrer">
+                    <p id="thrustVacuumKN"></p>
+                    <p>||</p>
+                    <p id="thrustVacuumLbf"></p>
+                </div>
+                <div class="container">
+                    <p><strong>Number of Engines:</strong> <span id="engineNumber"></span></p>
+                    <p><strong>Engine type:</strong> <span id="engineType"></span></p>
+                    <p><strong>Engine Version:</strong> <span id="engineVersion"></span></p>
+                    <p><strong>Engine Layout:</strong> <span id="engineLayout"></span></p>
+                    <p><strong>Maximum Engine Loss:</strong> <span id="engineLossMax"></span></p>
+                    <p><strong>Propellant 1:</strong> <span id="propellant1"></span></p>
+                    <p><strong>Propellant 2:</strong> <span id="propellant2"></span></p>
+                    <p><strong>Thrust-to-Weight Ratio:</strong> <span id="thrustToWeight"></span></p>
+                </div>
+                <div class="container">
+                    <h2>Landing Legs</h2>
+                    <p><strong>Number of Landing Legs:</strong> <span id="landingLegsNumber"></span></p>
+                    <p><strong>Landing Leg Material:</strong> <span id="landingLegsMaterial"></span></p>
+                </div>
+                <p></p>
+            </div>
+            
+        </nav>
+
+        <section class="main__section">
+            <article class="section__information">
+                <div class="carousel">
+                    <div id="rocketName" class="carousel__item">Name: Falcon Heavy</div>
+                    <div id="rocketType" class="carousel__item">Type: rocket</div>
+                    <div id="rocketCost" class="carousel__item">Cost Per Launch: 90000000</div>
+                    <div id="rocketCountry" class="carousel__item">Country: United States</div>
+                    <div id="rocketCompany" class="carousel__item">Company: SpaceX</div>
+                    <div id="rocketActive" class="carousel__item">Active: Yes</div>
+                </div>
+
+                <div class="section__information__container">
+                    <div class="section__information__2"></div>
+                    <div class="section__image">
+                        <img id="left_arrow" class="arrow" src="../storage/image/left__arow.png">
+                        <div id="image_container" class="image__crew__container">
+                            <img src="https://farm5.staticflickr.com/4599/38583829295_581f34dd84_b.jpg" referrerpolicy="no-referrer">
+                            <img src="https://farm5.staticflickr.com/4645/38583830575_3f0f7215e6_b.jpg" referrerpolicy="no-referrer">
+                        </div>
+                        <img id="right_arrow" class="arrow" src="../storage/image/right__arrow.png">
+                    </div>
+                    <div class="section__information__3"></div>
+                </div>
+            </article>
+
+            <footer class="footer">
+                <ul class="footer__list">
+                    <li>
+                        <a class="footer__links" href="#">
+                            <img src ="../storage/image/capsules.png">
+                            <span>Capsules</span>
+                        </a>
+                    </li>
+        
+                    <li>
+                        <a class="footer__links" href="./company.html">
+                            <img src ="../storage/image/company.png">
+                            <span>Company</span>
+                        </a>
+                    </li>
+        
+        
+                    <li>
+                        <a class="footer__links" href="#">
+                            <img src ="../storage/image/cores.png">
+                            <span>Cores</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="footer__links" href="./crew.html">
+                            <img src ="../storage/image/crew.png">
+                            <span>Crew</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a class="footer__links" href="dragons.html">
+                            <img src ="../storage/image/dragon.png">
+                            <span>Dragons</span>
+                        </a>
+                    </li>
+                    
+        
+                    <li>
+                        <a class="footer__links" href="#">
+                            <img src ="../storage/image/history.png">
+                            <span>History</span>
+                        </a>
+                    </li>
+        
+                    <li>
+                        <a class="footer__links" href="#">
+                            <img src ="../storage/image/landpads.png">
+                            <span>Landpads</span>
+                        </a>
+                    </li>
+        
+                    <li>
+                        <a class="footer__links" href="../index.html">
+                            <img src ="../storage/image/launches.png">
+                            <span>Launches</span>
+                        </a>
+                    </li>
+        
+        
+                    <li>
+                        <a class="footer__links" href="#">
+                            <img src ="../storage/image/launchpads.png">
+                            <span>Launchpads</span>
+                        </a>
+                    </li>
+        
+                    <li>
+                        <a class="footer__links" href="#">
+                            <img src ="../storage/image/payloads.png">
+                            <span>Payloads</span>
+                        </a>
+                    </li>
+        
+                    <li>
+                        <a class="footer__links" href="#">
+                            <img src ="../storage/image/roadster.png">
+                            <span>Roadster</span>
+                        </a>
+                    </li>
+                    
+        
+                    <li>
+                        <a class="footer__links" href="rockets.html">
+                            <img src ="../storage/image/rockets.png">
+                            <span>Rockets</span>
+                        </a>
+                    </li>
+        
+                    <li>
+                        <a class="footer__links" href="./ships.html">
+                            <img src ="../storage/image/spaceship.png">
+                            <span>Ships</span>
+                        </a>
+                    </li>
+                   
+                    <li>
+                        <a class="footer__links" href="#">
+                            <img src ="../storage/image/starlink.png">
+                            <span>Starlink</span>
+                        </a>
+                    </li>
+                
+                </ul>
+            </footer>
+        </section>
+
+        <nav class="nav__right">
+            <div id="rocketDescription" class="information__item">
+                <h2>Rocket Description</h2>
+                <p id="description"></p>
+                <h2>Rocket Stage Thrust Characteristics</h2>
+                <h3>First Stage:</h3>
+                <div class="container__weight">
+                    <h4>Sea Level Thrust:</h4>
+                    <img src="../storage/image/sea_level.png" referrerpolicy="no-referrer">
+                    <p id="firstStageThrustSeaLevelKN"></p>
+                    <p>||</p>
+                    <p id="firstStageThrustSeaLevelLbf"></p>
+                </div>
+                <div class="container__weight">
+                    <h4>Vacuum Thrust:</h4>
+                    <img src="../storage/image/motor.png" referrerpolicy="no-referrer">
+                    <p id="firstStageThrustVacuumKN"></p>
+                    <p>||</p>
+                    <p id="firstStageThrustVacuumLbf"></p>
+                </div>
+                <p id="firstStageReusable"></p>
+                <p id="firstStageEngines"></p>
+                <p id="firstStageFuelAmount"></p>
+                <p id="firstStageBurnTime"></p>
+                <h3>Second Stage:</h3>
+                <div class="container__weight">
+                    <h4>Thrust:</h4>
+                    <img src="../storage/image/motor.png" referrerpolicy="no-referrer">
+                    <p id="secondStageThrustKN"></p>
+                    <p>||</p>
+                    <p id="secondStageThrustLbf"></p>
+                </div>
+                <h4>Payloads:</h4>
+                <div class="container__weight">
+                    <h4>Composite Fairing Height</h4>
+                    <img src="../storage/image/height.png" referrerpolicy="no-referrer">
+                    <p id="fairingHeightMeters"></p>
+                    <p>||</p>
+                    <p id="fairingHeightFeet"></p>
+                </div>
+                <div class="container__weight">
+                    <h4>Composite Fairing Diameter</h4>
+                    <img src="../storage/image/diameter.png" referrerpolicy="no-referrer">
+                    <p id="fairingDiameterMeters"></p>
+                    <p>||</p>
+                    <p id="fairingDiameterFeet"></p>
+                </div>
+                <div class="container">
+                    <h4>Rocket Characteristics:</h4>
+                    <p id="secondStageReusable"></p>
+                    <p id="secondStageEngines"></p>
+                    <p id="secondStageFuelAmount"></p>
+                    <p id="secondStageBurnTime"></p>
+                    
+                </div>
+            </div>
+        </nav>
+    </main>
+</body>
+</html>
