@@ -34,9 +34,7 @@ body {
     background-size: cover;
     background-repeat: repeat;
     padding: 20px;
-    overflow-y: scroll; /* Agregar scroll vertical */
-    max-height: 650px; /* Establecer una altura máxima para que aparezca el scroll */
-
+ 
 
 }
 
