@@ -109,63 +109,37 @@ body {
 .section__information__3 {
 }
 
-.footer{
-    padding: 0 1% 0 1%; /* Padding superior, izquierdo y derecho en 1% */
-    font-size: 20px;
-    width: 1500px;
-    
-
-}
-
-.footer__list {
+.footer {
     display: flex;
-    list-style: none;
-    justify-content: space-between;
-    padding: 2%;
+    justify-content: center; /* Centrar el footer horizontalmente */
+    padding: 0 1%; /* Padding de arriba, izquierda y derecha en 1% */
+    font-size: 20px;
+    width: 100%; /* Asegurar que el footer ocupe el ancho completo */
+    background: rgb(101, 117, 180); /* Fondo del footer */
     border-radius: 15px;
-
+    position: relative; /* Para asegurar que se centre correctamente */
+    bottom: 0; /* Colocar el footer en la parte inferior */
 }
 
-
-
 .footer__list {
-    position: relative;
     display: flex;
     list-style: none;
     justify-content: space-between;
     padding: 1.2%;
-    border-radius: 15px;
+    width: 100%;
     overflow: hidden;
-    background: rgb(101, 117, 180);
-    
-
+    gap: 30px;
+    overflow-x: scroll;
 }
 
-.footer__links{
+.footer__links {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    color: white
-
-
+    color: white;
 }
 
-.footer__links img{
-    width: 30%
+.footer__links img {
+    width: 30%;
 }
-
-
-
-.nav__right {
-    width: 500px;
-    background-image: url('../storage/image/stars.gif');
-    background-size: cover;
-    background-repeat: repeat;
-}
-.information__item {
-}
-.pagination {
-}
-
-

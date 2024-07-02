@@ -129,29 +129,28 @@ body {
     color: white;
 }
 
+
 .footer {
-    padding: 0 1% 0 1%; /* Top, left, and right padding at 1% */
-    font-size: 20px;
-    width: 1450px;
-}
-
-.footer__list {
     display: flex;
-    list-style: none;
-    justify-content: space-between;
-    padding: 2%;
+    justify-content: center; /* Centrar el footer horizontalmente */
+    padding: 0 1%; /* Padding de arriba, izquierda y derecha en 1% */
+    font-size: 20px;
+    width: 100%; /* Asegurar que el footer ocupe el ancho completo */
+    background: rgb(101, 117, 180); /* Fondo del footer */
     border-radius: 15px;
+    position: relative; /* Para asegurar que se centre correctamente */
+    bottom: 0; /* Colocar el footer en la parte inferior */
 }
 
 .footer__list {
-    position: relative;
     display: flex;
     list-style: none;
     justify-content: space-between;
     padding: 1.2%;
-    border-radius: 15px;
+    width: 100%;
     overflow: hidden;
-    background: rgb(101, 117, 180);
+    gap: 30px;
+    overflow-x: scroll;
 }
 
 .footer__links {
