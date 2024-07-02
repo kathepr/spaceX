@@ -54,8 +54,7 @@ body {
 
 .section__information {
     color: #ffffff;
-    padding: 20px;
-    margin-bottom: 20px;
+
 }
 
 .carousel {
@@ -82,12 +81,13 @@ body {
 }
 
 .section__image {
-    height: 980px;
+    height: 650px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 .arrow {
     position: absolute;
@@ -108,11 +108,11 @@ body {
 }
 
 .image__crew {
-    height: 600px;
-    width: auto;
+    height: 500px;
     margin: 30px;
     border-radius: 15px;
 }
+
 
 .section__information__3 {
 }

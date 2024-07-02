@@ -28,11 +28,16 @@ body {
 }
 
 .nav__left {
+    
     width: 500px;
     background-image: url('../storage/image/stars.gif');
     background-size: cover;
     background-repeat: repeat;
     padding: 20px;
+    overflow-y: scroll; /* Agregar scroll vertical */
+    max-height: 650px; /* Establecer una altura máxima para que aparezca el scroll */
+
+
 }
 
 .nav__left img {
@@ -64,8 +69,7 @@ body {
 
 .section__information {
     color: #ffffff;
-    padding: 20px;
-    margin-bottom: 20px;
+
 }
 
 .carousel {
@@ -92,7 +96,7 @@ body {
 }
 
 .section__image {
-    height: 960px;
+    height: 650px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -123,7 +127,7 @@ body {
     flex-direction: column;
     align-items: center; 
     overflow-y: scroll;
-    height: 680px; 
+    height: 500px; 
     width: 100%;
     padding: 10px 0;
 }
@@ -135,7 +139,7 @@ body {
 }
 
 .image__crew {
-    height: 600px;
+    height: 500px;
     width: auto;
     margin: 30px;
     border-radius: 15px;
