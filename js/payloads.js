@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const launchName = await fetchLaunchName(payload.launch);
         const capsuleType = await fetchCapsuleType(payload.dragon.capsule);
 
-        // Update nav__left
+        // nav__left
         const navLeft = document.querySelector("nav.nav__left .description__container");
         navLeft.innerHTML = `
             <h2>Dragon Information</h2>
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             ${payload.manufacturers.length ? `<p>Manufacturers: ${payload.manufacturers.join(", ")}</p>` : ""}
         `;
 
-        // Update carousel
+        // carousel
         const carousel = document.querySelector(".carousel");
         carousel.innerHTML = `
             <div class="carousel__item">Name: ${payload.name}</div>
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             <div class="carousel__item">Launch: ${launchName}</div>
         `;
 
-        // Update nav__right
+        // nav__right
         const navRight = document.querySelector("nav.nav__right .information__item");
         navRight.innerHTML = `
             <h2>Payload Information</h2>
@@ -89,6 +89,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("right_arrow").addEventListener("click", showNextPayload);
     document.getElementById("left_arrow").addEventListener("click", showPreviousPayload);
 
-    // Initial content load
+    // Carga de contenido inicial
     updateContent(currentIndex);
 });

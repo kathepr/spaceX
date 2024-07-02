@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const apiUrlLaunchpads = 'https://api.spacexdata.com/v4/launchpads/';
     const apiUrlRockets = 'https://api.spacexdata.com/v4/rockets/';
 
-    // Elements for nav__left
+    // nav__left
     const fullNameEl = document.querySelector('.nav__left .description__container:nth-of-type(1) h2');
     const timezoneEl = document.querySelector('.nav__left .description__container:nth-of-type(1) p:nth-of-type(1)');
     const latitudeEl = document.querySelector('.nav__left .description__container:nth-of-type(1) p:nth-of-type(2)');
@@ -12,23 +12,23 @@ document.addEventListener('DOMContentLoaded', async () => {
     const launchSuccessesEl = document.querySelector('.nav__left .description__container:nth-of-type(1) p:nth-of-type(5)');
     const rocketsEl = document.querySelector('.nav__left .description__container:nth-of-type(2) p:nth-of-type(1)');
 
-    // Elements for nav__right
+    // nav__right
     const launchesEl = document.querySelector('.nav__right .information__item p:nth-of-type(1)');
 
-    // Elements for carousel
+    // carousel
     const nameEl = document.querySelector('.carousel__item:nth-of-type(1)');
     const localityEl = document.querySelector('.carousel__item:nth-of-type(2)');
     const regionEl = document.querySelector('.carousel__item:nth-of-type(3)');
     const statusEl = document.querySelector('.carousel__item:nth-of-type(4)');
 
-    // Arrow elements for navigation
+    // Flechas para navegar
     const leftArrow = document.getElementById('left_arrow');
     const rightArrow = document.getElementById('right_arrow');
 
     let launchpads = [];
     let currentIndex = 0;
 
-    // Fetch data from API
+    // Obtener datos de API
     async function fetchData() {
         try {
             const response = await fetch(apiUrlLaunchpads);
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    // Fetch rocket names
+    // Se obtienen los nombres de los cohetes
     async function fetchRocketName(rocketId) {
         try {
             const response = await fetch(`${apiUrlRockets}${rocketId}`);
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    // Function to update the UI with the current launchpad data
+    // Función para actualizar la interfaz de usuario con los datos actuales de la plataforma de lanzamiento
     async function updateUI() {
         const currentLaunchpad = launchpads[currentIndex];
         fullNameEl.textContent = `Full Name: ${currentLaunchpad.full_name}`;
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         statusEl.textContent = `Status: ${currentLaunchpad.status}`;
     }
 
-    // Event listeners for arrow navigation
+    // Event listeners para las flechas
     leftArrow.addEventListener('click', async () => {
         currentIndex = (currentIndex - 1 + launchpads.length) % launchpads.length;
         await updateUI();
@@ -86,6 +86,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         await updateUI();
     });
 
-    // Fetch data on page load
+    // Carga el contenido de la pagina
     fetchData();
 });

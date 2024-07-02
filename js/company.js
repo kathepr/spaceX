@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const apiURL = 'https://api.spacexdata.com/v4/company';
 
-    // Selecting elements in nav__left and nav__right
+    // Se seleccionan elementos en nav__left y nav__right
     const navLeft = document.getElementById('nav__left');
     const navRight = document.getElementById('nav__right');
     const carousel = document.getElementById('carousel');
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const images = document.querySelectorAll('.image__crew__container');
     let currentIndex = 0;
 
-    // Fetch company data from API
+    // Obtener datos de la API
     const fetchCompany = async () => {
         try {
             const response = await fetch(apiURL);
@@ -21,16 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Display company data
+    // Datos de Company 
     const displayCompany = (company) => {
-        // Display in carousel
+        // carousel
         carousel.innerHTML = `
             <div class="carousel__item">Name: ${company.name}</div>
             <div class="carousel__item">Founder: ${company.founder}</div>
             <div class="carousel__item">Founded: ${company.founded}</div>
         `;
 
-        // Display in nav__left
+        // nav__left
         navLeft.innerHTML = `
             <h2>Headquarters</h2>
             <p>Address: ${company.headquarters.address}, ${company.headquarters.city}, ${company.headquarters.state}</p>
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </ul>
         `;
 
-        // Display in nav__right
+        // nav__right
         navRight.innerHTML = `
             <h2>Company Information</h2>
             <p>Employees: ${company.employees}</p>
@@ -86,6 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
         showImage();
     });
 
-    // Fetch company information on page load
+    // Se llama la funcion para obtener la información cuando se cargue la pagina
     fetchCompany();
 });

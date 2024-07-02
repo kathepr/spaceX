@@ -10,14 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentDragonIndex = 0;
     let dragons = [];
 
-    const fetchDragons = () => {
-        fetch('https://api.spacexdata.com/v4/dragons')
-            .then(response => response.json())
-            .then(data => {
-                dragons = data;
-                updateDragonInfo(currentDragonIndex);
-            })
-            .catch(error => console.error('Error fetching dragon data:', error));
+    const fetchDragons = async () => {
+        try {
+            const response = await fetch('https://api.spacexdata.com/v4/dragons');
+            dragons = await response.json();
+            updateDragonInfo(currentDragonIndex);
+        } catch (error) {
+            console.error('Error fetching dragon data:', error);
+        }
     };
 
     const updateDragonInfo = (index) => {
@@ -28,13 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const dragon = dragons[index];
 
-        //nav__right
+        // nav__right
         dragonDescription.innerHTML = `
-            <p><strong>Description:</strong> ${dragon.description}</p>
+            <p><strong>Descripción:</strong> ${dragon.description}</p>
             <p><strong>Wikipedia:</strong> <a href="${dragon.wikipedia}" target="_blank">${dragon.wikipedia}</a></p>
         `;
 
-        // Carousel
+        // Carrusel
         dragonName.textContent = `Name: ${dragon.name}`;
         dragonActive.textContent = `Active: ${dragon.active ? 'Yes' : 'No'}`;
 
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p><strong>First Flight:</strong> ${dragon.first_flight}</p>
         `;
 
-        // LImpiar las imagenes previas
+        // Limpiar imágenes previas
         imageContainer.innerHTML = '';
         dragon.flickr_images.forEach(image => {
             const img = document.createElement('img');
@@ -82,6 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
         updateDragonInfo(currentDragonIndex);
     });
 
-    // Obtener los datos iniciales
+    // Obtener los datos desde el comienzo para que se visualicen cuando se cargue la pagina
     fetchDragons();
 });

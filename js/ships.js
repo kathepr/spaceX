@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const shipImage = document.getElementById('image_crew');
     const shipDetails = document.querySelector('.information__item');
 
-    // Elements for nav__left
+    // nav__left
     const imoNumber = document.querySelector('.description__container p:nth-child(2)');
     const mmsiNumber = document.querySelector('.description__container p:nth-child(3)');
     const absNumber = document.querySelector('.description__container p:nth-child(4)');
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     let ships = [];
     let currentIndex = 0;
 
-    // Fetch ship data from the API
+    // Obteniendo datos desde la API
     try {
         const response = await fetch(API_URL);
         ships = await response.json();
@@ -28,19 +28,19 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error('Error fetching ships data:', error);
     }
 
-    // Event listener for the left arrow click
+    // Event listener para la flecha izquierda
     leftArrow.addEventListener('click', () => {
         currentIndex = (currentIndex === 0) ? ships.length - 1 : currentIndex - 1;
         updateShipInfo(ships[currentIndex]);
     });
 
-    // Event listener for the right arrow click
+    // Event listener para la flecha derecha
     rightArrow.addEventListener('click', () => {
         currentIndex = (currentIndex === ships.length - 1) ? 0 : currentIndex + 1;
         updateShipInfo(ships[currentIndex]);
     });
 
-    // Function to update ship information
+    // Funcion para actualizar informacion
     function updateShipInfo(ship) {
         shipName.textContent = `Name: ${ship.name}`;
         shipPort.textContent = `Home Port: ${ship.home_port}`;

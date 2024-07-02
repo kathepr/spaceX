@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const data = starlinkData[index];
         const spaceTrack = data.spaceTrack;
 
-        // Fetch launch name
+        // Obteniendo el nombre de "launch"
         const launchName = await fetchLaunchData(data.launch);
 
         // Nav left
