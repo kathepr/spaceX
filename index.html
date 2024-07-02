@@ -5,91 +5,167 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <script type="module" src="./js/main.js" defer></script>
-    <title>Rocket Information</title>
+    <title>Launches Information</title>
 </head>
 <body class="body">
     <header class="header">
-        <div class="header__title">Nombre del Rocket</div>
+        <div class="header__title">SpaceX Launches</div>
     </header>
-
     <main class="main">
-
         <nav class="nav__left">
             <div class="description__item">
-                <div class="description__container"></div>
-                <div class="description__container"></div>
-                <div class="description__container"></div>
-                <div class="description__container"></div>
+                <div class="description__container">
+                    <h2>Links</h2>
+                    <ul id="links"></ul>
+                </div>
+                <div class="description__container">
+                    <h2>Reddit Links</h2>
+                    <ul id="reddit-links"></ul>
+                </div>
+                <div class="description__container">
+                    <h2>Details</h2>
+                    <p id="details"></p>
+                    <p id="static-fire-date"></p>
+                    <p id="rocket"></p>
+                    <p id="success"></p>
+                </div>
             </div>
         </nav>
-
         <section class="main__section">
             <article class="section__information">
                 <div class="carousel">
-                    <div class="carousel__item"></div>
-                    <div class="carousel__item"></div>
+                    <div class="carousel__item">Name: <span id="name"></span></div>
+                    <div class="carousel__item">Flight Number: <span id="flight-number"></span></div>
+                </div>
+                <div class="section__information__container">
+                    <div class="section__information__2"></div>
+                    <div class="section__image">
+                        <img id="left_arrow" class="arrow" src="./storage/image/left__arow.png">
+                        <img id="image_crew" class="image__crew" src="" referrerpolicy="no-referrer">
+                        <img id="right_arrow" class="arrow" src="./storage/image/right__arrow.png">
+                    </div>
+                    <div class="section__information__3"></div>
                 </div>
             </article>
 
-            <article class="section__information__container">
-                <div class="section__information__2"></div>
-                <div class="section__image"></div>
-                <div class="section__information__3"></div>
-            </article>
+            <footer class="footer">
+                <ul class="footer__list">
+                    <li>
+                        <a class="footer__links" href="#">
+                            <img src ="../storage/image/capsules.png">
+                            <span>Capsules</span>
+                        </a>
+                    </li>
+        
+                    <li>
+                        <a class="footer__links" href="./views/company.html">
+                            <img src ="../storage/image/company.png">
+                            <span>Company</span>
+                        </a>
+                    </li>
+        
+        
+                    <li>
+                        <a class="footer__links" href="#">
+                            <img src ="../storage/image/cores.png">
+                            <span>Cores</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="footer__links" href="./views/crew.html">
+                            <img src ="../storage/image/crew.png">
+                            <span>Crew</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a class="footer__links" href="./views/dragons.html">
+                            <img src ="../storage/image/dragon.png">
+                            <span>Dragons</span>
+                        </a>
+                    </li>
+                    
+        
+                    <li>
+                        <a class="footer__links" href="#">
+                            <img src ="../storage/image/history.png">
+                            <span>History</span>
+                        </a>
+                    </li>
+        
+                    <li>
+                        <a class="footer__links" href="#">
+                            <img src ="../storage/image/landpads.png">
+                            <span>Landpads</span>
+                        </a>
+                    </li>
+        
+                    <li>
+                        <a class="footer__links" href="index.html">
+                            <img src ="../storage/image/launches.png">
+                            <span>Launches</span>
+                        </a>
+                    </li>
+        
+        
+                    <li>
+                        <a class="footer__links" href="./views/launchpads.html">
+                            <img src ="../storage/image/launchpads.png">
+                            <span>Launchpads</span>
+                        </a>
+                    </li>
+        
+                    <li>
+                        <a class="footer__links" href="./views/payloads.html">
+                            <img src ="../storage/image/payloads.png">
+                            <span>Payloads</span>
+                        </a>
+                    </li>
+        
+                    <li>
+                        <a class="footer__links" href="./views/roadster.html">
+                            <img src ="../storage/image/roadster.png">
+                            <span>Roadster</span>
+                        </a>
+                    </li>
+                    
+        
+                    <li>
+                        <a class="footer__links" href="./views/rockets.html">
+                            <img src ="../storage/image/rockets.png">
+                            <span>Rockets</span>
+                        </a>
+                    </li>
+        
+                    <li>
+                        <a class="footer__links" href="./views/ships.html">
+                            <img src ="../storage/image/spaceship.png">
+                            <span>Ships</span>
+                        </a>
+                    </li>
+                   
+                    <li>
+                        <a class="footer__links" href="./views/starlink.html">
+                            <img src ="../storage/image/starlink.png">
+                            <span>Starlink</span>
+                        </a>
+                    </li>
+                
+                </ul>
+            </footer>
         </section>
-
-        <footer class="footer">
-            <ul>
-                <li>Capsules</li>
-            </ul>
-            <ul>
-                <li>Company</li>
-            </ul>
-            <ul>
-                <li>Cores</li>
-            </ul>
-            <ul>
-                <li>Dragons</li>
-            </ul>
-            <ul>
-                <li>History</li>
-            </ul>
-            <ul>
-                <li>Landpads</li>
-            </ul>
-            <ul>
-                <li>Launches</li>
-            </ul>
-            <ul>
-                <li>Launchpads</li>
-            </ul>
-            <ul>
-                <li>Payloads</li>
-            </ul>
-            <ul>
-                <li>Roadster</li>
-            </ul>
-            <ul>
-                <li>Rockets</li>
-            </ul>
-            <ul>
-                <li>Ships</li>
-            </ul>
-            <ul>
-                <li>Starlink</li>
-            </ul>
-        </footer>
-
         <nav class="nav__right">
-            <div class="information__item"></div>
-            <div class="pagination">
-                <a href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
+            <div class="information__item">
+                <h2>Additional Information</h2>
+                <p id="date-utc"></p>
+                <p id="date-local"></p>
+                <p id="date-precision"></p>
+                <p id="upcoming"></p>
+                <p id="core-details"></p>
             </div>
         </nav>
-
     </main>
 </body>
 </html>
+
