@@ -1,12 +1,14 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const apiUrl = 'https://api.spacexdata.com/v4/launches/';
+    const rocketsApiUrl = 'https://api.spacexdata.com/v4/rockets/';
+    const coresApiUrl = 'https://api.spacexdata.com/v4/cores/';
     const response = await fetch(apiUrl);
     const launches = await response.json();
 
     let currentLaunchIndex = 0;
     let currentImageIndex = 0;
 
-    const updateContent = (index) => {
+    const updateContent = async (index) => {
         const launch = launches[index];
 
         // Links
@@ -56,14 +58,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Rocket
         const rocketElement = document.getElementById('rocket');
         if (launch.rocket) {
-            rocketElement.textContent = `Rocket: ${launch.rocket}`;
+            const rocketResponse = await fetch(`${rocketsApiUrl}${launch.rocket}`);
+            const rocketData = await rocketResponse.json();
+            rocketElement.textContent = `Rocket: ${rocketData.name}`;
         } else {
             rocketElement.textContent = '';
         }
-     
-       
-
-
 
         // Success
         const successElement = document.getElementById('success');
@@ -76,14 +76,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Carousel Information
         const nameElement = document.getElementById('name');
         if (launch.name) {
-            nameElement.textContent = `Name: ${launch.name}`;
+            nameElement.textContent = `${launch.name}`;
         } else {
             nameElement.textContent = '';
         }
 
         const flightNumberElement = document.getElementById('flight-number');
         if (launch.flight_number) {
-            flightNumberElement.textContent = `Flight Number: ${launch.flight_number}`;
+            flightNumberElement.textContent = `${launch.flight_number}`;
         } else {
             flightNumberElement.textContent = '';
         }
@@ -123,18 +123,24 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Cores
         const coreDetailsElement = document.getElementById('core-details');
         if (launch.cores && launch.cores.length > 0) {
-            const coreDetails = launch.cores.map(core => `
-                Core: ${core.core}, 
-                Flight: ${core.flight}, 
-                Gridfins: ${core.gridfins ? 'Yes' : 'No'}, 
-                Legs: ${core.legs ? 'Yes' : 'No'}, 
-                Reused: ${core.reused ? 'Yes' : 'No'}, 
-                Landing Attempt: ${core.landing_attempt ? 'Yes' : 'No'}, 
-                Landing Success: ${core.landing_success ? 'Yes' : 'No'}, 
-                Landing Type: ${core.landing_type}, 
-                Landpad: ${core.landpad}
-            `).join('<br>');
-            coreDetailsElement.innerHTML = coreDetails;
+            const coreDetails = await Promise.all(
+                launch.cores.map(async core => {
+                    const coreResponse = await fetch(`${coresApiUrl}${core.core}`);
+                    const coreData = await coreResponse.json();
+                    return `
+                        Core: ${coreData.serial}, 
+                        Flight: ${core.flight}, 
+                        Gridfins: ${core.gridfins ? 'Yes' : 'No'}, 
+                        Legs: ${core.legs ? 'Yes' : 'No'}, 
+                        Reused: ${core.reused ? 'Yes' : 'No'}, 
+                        Landing Attempt: ${core.landing_attempt ? 'Yes' : 'No'}, 
+                        Landing Success: ${core.landing_success ? 'Yes' : 'No'}, 
+                        Landing Type: ${core.landing_type}, 
+                        Landpad: ${core.landpad}
+                    `;
+                })
+            );
+            coreDetailsElement.innerHTML = coreDetails.join('<br>');
         } else {
             coreDetailsElement.textContent = '';
         }
