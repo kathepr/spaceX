@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             coreDetailsElement.textContent = '';
         }
 
-        // Actualizacion de imagenes con su respectivo index
+        // Actualizacion de imagenes (Inicia con la primera del JSON)
         currentImageIndex = 0;
         updateImage(currentImageIndex);
     };
@@ -171,6 +171,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
-    // Se muestran los datos 
+    // Se muestran los datos cuando se carga la página
     updateContent(currentLaunchIndex);
 });
